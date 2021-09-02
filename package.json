@@ -23,5 +23,10 @@
         "vue": "^2.6.12",
         "vue-loader": "^15.9.8",
         "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "@mapbox/node-pre-gyp": "^1.0.5",
+        "color": "^4.0.1",
+        "colorthief": "^2.3.2"
     }
 }
