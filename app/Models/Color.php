@@ -27,6 +27,7 @@ class Color
      * @var int
      */
     public $a;
+
     /**
      * Construct new Color
      *
@@ -36,7 +37,6 @@ class Color
     public function __construct($color = 0x000000, $short = false)
     {
         if (is_numeric($color)) {
-
             if ($short) {
                 $this->r = (($color >>  8) & 0xf) * 0x11;
                 $this->g = (($color >>  4) & 0xf) * 0x11;
@@ -48,11 +48,8 @@ class Color
                 $this->b =  $color        & 0xff;
                 $this->a = ($color >> 24) & 0xff;
             }
-
         } elseif (is_array($color)) {
-
             list($this->r, $this->g, $this->b) = $color;
-
             if (count($color) > 3)
                 $this->a = $color[3];
         }
